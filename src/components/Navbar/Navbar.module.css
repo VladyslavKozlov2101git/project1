@@ -3,6 +3,11 @@
     background-color: rgb(44, 68, 173);
   }
 
-  .item{
+.item{
     color: white;
-  }
+}
+
+
+.item.active{
+    color: rgb(158, 42, 58);
+}
