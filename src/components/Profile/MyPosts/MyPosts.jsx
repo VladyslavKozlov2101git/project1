@@ -4,13 +4,17 @@ import Posts from './Posts/Posts';
 
 function MyPosts() {
     return <div className={s.profile}>    
-    <div>
-      My post
+    <div className={s.postsBlock}>
+      <h2>My post</h2> 
       <div>
-          <textarea>
+          <div>
+            <textarea></textarea>
+          </div>
 
-          </textarea>
-          <button>Add post</button>
+          <div>
+            <button>Add post</button>
+          </div>
+          
       </div>
       <div>
           New post
