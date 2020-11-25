@@ -3,6 +3,15 @@ import s from './MyPosts.module.css'
 import Posts from './Posts/Posts';
 
 function MyPosts() {
+
+    let posts=[
+      {id : "1", post : "Hi, how are you?", like : 15, dislike : 20},
+      {id : "2", post : "It's my first post", like : 6, dislike : 7}
+    ]
+
+    let postsElemnts = posts.map(p => <Posts post ={p.post} like = {p.like} dislike = {p.dislike} /> )
+
+
     return <div className={s.profile}>    
     <div className={s.postsBlock}>
       <h2>My post</h2> 
@@ -20,8 +29,7 @@ function MyPosts() {
           New post
       </div>
       <div className = {s.posts}>
-        <Posts message ="Hi, how are you?" like = "15" dislike = "20" />
-        <Posts message ="It's my first post" like = "6" dislike = "7" />
+        {postsElemnts}
       </div>
       
     </div>
