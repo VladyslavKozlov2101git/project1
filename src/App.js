@@ -8,6 +8,7 @@ import { BrowserRouter, Route } from 'react-router-dom';
 
 
 
+
 function App(props) {
   
   return (
@@ -19,8 +20,13 @@ function App(props) {
           
           <Route path="/dialogs" render={() => <Dialogs
              state={props.state.dialogsPage} />}/>
+
           <Route path="/profile" render={() => <Profile
-             state={props.state.profilePage} />}/>
+             profilePage={props.state.profilePage}
+              addPost = {props.addPost}
+              updateNewPostText = {props.updateNewPostText}
+              
+              />}/>
 
         </div>
       </div>
